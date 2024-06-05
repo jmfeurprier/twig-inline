@@ -1,10 +1,11 @@
 {
-    "name": "jmf/package-template",
-    "description" : "Package template for jmf packages",
+    "name": "jmf/twig-inline",
+    "description" : "Twig extension for inlining files in Twig templates.",
     "license": "mit",
     "type": "library",
     "require": {
-        "php": ">=8.3"
+        "php": ">=8.3",
+        "twig/twig": "^3.0"
     },
     "require-dev": {
         "phing/phing": "^2.17",
@@ -20,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jmf\\_PackageTemplate_\\": "src"
+            "Jmf\\Twig\\Extension\\Inline\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jmf\\_PackageTemplate_\\": "tests/unit/src"
+            "Jmf\\Twig\\Extension\\Inline\\": "tests/unit/src"
         }
     }
 }
