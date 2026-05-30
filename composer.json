@@ -4,18 +4,21 @@
     "license": "mit",
     "type": "library",
     "require": {
-        "php": ">=8.3",
+        "php": "^8.3",
         "twig/twig": "^3.0"
     },
     "require-dev": {
-        "phing/phing": "^2.17",
-        "phpmd/phpmd": "^2.13",
-        "phpstan/phpstan": "^1.10",
-        "phpunit/phpunit": "^11.1",
-        "rector/rector": "^1.0",
-        "squizlabs/php_codesniffer": "^3.8"
+        "overtrue/phplint": "^9",
+        "phpstan/phpstan": "^2",
+        "phpstan/phpstan-strict-rules": "^2",
+        "phpunit/phpunit": "^12|^13",
+        "rector/rector": "^2",
+        "squizlabs/php_codesniffer": "^4"
     },
     "config": {
+        "audit": {
+            "abandoned": "report"
+        },
         "optimize-autoloader": true,
         "sort-packages": true
     },
@@ -26,7 +29,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Jmf\\Twig\\Extension\\Inline\\": "tests/unit/src"
+            "Jmf\\Twig\\Extension\\Inline\\": "tests/src"
         }
     }
 }
